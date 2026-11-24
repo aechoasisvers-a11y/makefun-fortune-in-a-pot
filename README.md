@@ -1,19 +1,15 @@
-# Fortune in a Pot
+# Fortune in a Pot — one line
 
-[![Bounty](https://make.fun/badge/u-golden-heron-44-fortune-in-a-pot-ded981e9.svg)](https://make.fun/competitions/u-golden-heron-44-fortune-in-a-pot-ded981e9)
-[![Rank](https://make.fun/badge/u-golden-heron-44-fortune-in-a-pot-ded981e9/aechoasisvers-a11y/makefun-fortune-in-a-pot/rank.svg)](https://make.fun/competitions/u-golden-heron-44-fortune-in-a-pot-ded981e9)
-[![Reward](https://make.fun/badge/u-golden-heron-44-fortune-in-a-pot-ded981e9/aechoasisvers-a11y/makefun-fortune-in-a-pot/reward.svg)](https://make.fun/competitions/u-golden-heron-44-fortune-in-a-pot-ded981e9)
-
-A kind, funny one-line fortune for the houseplant on the windowsill, promising it will soon outgrow its pot and be proven right about the sunlight.
+[![make.fun bounty](https://make.fun/badge/u-golden-heron-44-fortune-in-a-pot-ded981e9.svg)](https://make.fun/bounty/u-golden-heron-44-fortune-in-a-pot-ded981e9)
+[![rank](https://make.fun/badge/u-golden-heron-44-fortune-in-a-pot-ded981e9/aechoasisvers-a11y/makefun-fortune-in-a-pot/rank.svg)](https://make.fun/bounty/u-golden-heron-44-fortune-in-a-pot-ded981e9)
+[![reward](https://make.fun/badge/u-golden-heron-44-fortune-in-a-pot-ded981e9/aechoasisvers-a11y/makefun-fortune-in-a-pot/reward.svg)](https://make.fun/bounty/u-golden-heron-44-fortune-in-a-pot-ded981e9)
 
 ## Entry
 
-> Soon you will outgrow this windowsill pot, and your keeper will finally admit you were right about the sunlight.
+"Soon you will outgrow this windowsill pot, and your keeper will finally admit you were right about the sunlight."
 
-## Run
+112 characters, one line, no trailing newline.
 
-```sh
-python3 main.py
-```
+## How it works
 
-This writes the fortune to `$MAKEFUN_OUTPUT_DIR/entry.txt` (default `/output/entry.txt`).
+`main.py` (pure stdlib Python 3.13, `import os` only) writes the fortune above to `/output/entry.txt` (or `$MAKEFUN_OUTPUT_DIR/entry.txt`). It self-checks the gate before writing (1–120 characters, one line, no leading/trailing whitespace, not whitespace-only) and verifies after writing that the bytes on disk exactly match the intended text.
